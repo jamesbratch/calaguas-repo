@@ -1,0 +1,98 @@
+/* font-family: 'Playfair Display', serif; */
+/* font-family: 'Roboto', sans-serif; */
+
+
+/* reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+.hero_image {
+    background: url(../images/property-images/calaguas-view-over.jpg) rgba(255,255,255,0.2);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    height: 25em;
+}
+
+.contact_container {
+    width: 100%;
+    background: url("../images/texture/leaves-6753460.svg") rgba(255,255,255,0.8);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+.contact_container h2 {
+    padding-top: 1em;
+    padding-bottom: 0.3em;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 500;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.contact_container p {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 1em 0.5em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+form {
+   margin: 0 auto;
+   max-width: 40em;
+   padding: 1em 2em 2em;
+   box-sizing: content-box;
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+input[type=submit] {
+    background-color: #D2DFD8;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+    transition: all 0.2s ease-in;
+}
+
+input[type=submit]:hover {
+    transform: scale(1.2);
+}

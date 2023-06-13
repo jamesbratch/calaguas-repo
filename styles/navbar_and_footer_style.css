@@ -1,0 +1,381 @@
+/* reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* page max width */
+
+.max-width {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* nav section */
+
+.nav-fixed {
+    display: block;
+    position: fixed;
+    right: 0;
+    left: 0;
+    max-width: inherit;
+    margin: 0 auto;
+    z-index: 99;
+}
+
+.nav-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: white;
+}
+
+.nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-align: center;
+    z-index: 999;
+}
+
+.nav-logo a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-logo h1 span {
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style-type: none;
+}
+
+.nav-links ul li {
+    display: inline;
+    padding: 0 10px;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+
+    transition: all 0.1s ease-in;
+}
+
+.nav-links ul li a button {
+    background-color: #D2DFD8;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+    transition: all 0.2s ease-in;
+}
+
+.nav-links ul li a:hover {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-links ul li a button:hover {
+    transform: scale(1.2);
+}
+
+/* Mobile Hamburger Menu */
+
+
+.hamburger {
+    position: relative;
+    display: block;
+    width: 35px;
+    cursor: pointer;
+    height: 35px;
+    z-index: 97;
+    
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+  }
+  
+  .hamburger .bar, 
+  .hamburger:after, 
+  .hamburger:before {
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #D2DFD8;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .hamburger.is-active .bar {
+    opacity: 0;
+  }
+  
+  .hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px, -6px);
+  }
+  
+   .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 18rem;
+    background-color: white;
+    min-height: 100%;
+    display: block;
+    z-index: 96;
+  /*   padding-top: 120px; */
+    transition: 0.4s ease-in-out;
+  }
+  
+  .mobile-nav.is-active {
+    left: 0;
+  }
+
+  .mobile-nav-container {
+    margin-top: 6em;
+    padding-top: 1em;
+  }
+
+  .mobile-nav ul li {
+    padding-left: 30px;
+    padding-bottom: 16px;
+  }
+  
+  .mobile-nav ul li a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  .mobile-nav-container button {
+    background-color: #D2DFD8;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+    transition: all 0.2s ease-in;
+  }
+  .nav-logo a:hover, 
+  .mobile-nav ul li a:hover {
+    color: rgba(0, 0, 0, 0.6);;
+  }
+
+  .mobile-nav-container button:hover {
+    transform: scale(1.2);
+  }
+
+  
+  @media(min-width: 680px) {
+    
+    .mobile-nav {
+      display: none;
+    }
+    
+    .hamburger {
+      display: none;
+    }
+  }
+
+
+
+
+/* footer section   */
+  .footer-main-section {
+    background: url("../images/property-images/calaguas-white-beach.jpg") rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    flex-shrink: 0;
+    gap: 0 80px;
+    padding: 50px 80px;
+}
+
+.footer-sections,
+.footer-sections-email {
+    border: 6px solid white;
+    border-radius: 50px;
+    margin: 30px 0;
+
+    flex-basis: 33.3%;
+    flex-grow: 0;
+    flex-shrink: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.icon {
+    border: 5px solid white;
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    filter: invert(100%);
+}
+
+.footer-text-title,
+.footer-text-email-title {
+    padding: 1em 0;
+}
+
+.footer-text-title,
+.footer-text-contact,
+.footer-text-email-title,
+.footer-text-email {
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+} 
+
+.footer-text .footer-media-type {
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding-top: 1.5em;
+}
+
+.footer-text .footer-contact {
+    font-weight: 200;
+    font-size: 1.2rem;
+    padding-top: 1.5em;
+}
+
+.footer-text .footer-email {
+    font-weight: 200;
+    font-size: 1rem;
+    padding-top: 1.5em;
+}
+
+.socail-media {
+    background-color: #24282C;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 20px 30px;
+}
+
+.round-outline {
+    height: 50px;
+    width: 50px;
+    border: 3px solid black;
+    padding: 10px;
+    margin: 0 7px;
+    border-radius: 50px;
+    filter: invert(70%);
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.1s ease-in;
+}
+
+.round-outline:hover {
+    filter: invert(100%);
+    transform: scale(1.1);
+}
+
+
+
+@media(max-width: 1023px) {
+    .footer-main-section {
+        flex-direction: column;
+    }
+    
+    .footer-sections,
+    .footer-sections-email {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .icon-container,
+    .footer-text-title,
+    .footer-text-contact {
+        flex-basis: 33.3%;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+    
+    .footer-text-email-title,
+    .footer-text-email {
+        flex-basis: 33.3%;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+    }
+
+@media(max-width: 680px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .footer-sections-email {
+        flex-direction: column;
+    }  
+    
+    .footer-text-email-title,
+    .footer-text-email {
+        flex-basis: 100%;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+  }  
+
+@media(max-width: 500px) {
+
+    .footer-main-section {
+        padding: 0 2em;
+    }
+
+    .footer-sections {
+        flex-direction: column;
+    }  
+}
+
+@media(max-width: 370px) {
+
+    .footer-text-email {
+        word-break: break-all;
+    }
+}
